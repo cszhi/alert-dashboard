@@ -1,5 +1,5 @@
 FROM python:3.10.5-alpine
-COPY ./alert-dashboard /app
+COPY . /app
 
 WORKDIR /app
 RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
