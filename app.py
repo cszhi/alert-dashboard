@@ -4,6 +4,9 @@ from datetime import datetime, timedelta
 import os
 import requests
 
+from dotenv import load_dotenv
+load_dotenv('.env')
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'dev123')
 
