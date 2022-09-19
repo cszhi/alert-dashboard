@@ -33,7 +33,7 @@ def alert_dashboard():
     sorted_data = {}
 
     try:
-        r = requests.get(alertmanager_url+'/api/v1/alerts?silenced=false')
+        r = requests.get(alertmanager_url+'/api/v1/alerts?silenced=false&inhibited=false')
     except requests.exceptions.ConnectionError as errc:
         return render_template('index.html', alerts=sorted_data, title=title, w_num=w_num, c_num=c_num, t_num=-1)
 
